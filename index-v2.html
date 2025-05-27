@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJR12Y9FLQ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -16,7 +15,7 @@
     <meta property="og:title" content="אינג׳רה טֶנָּא – אינג׳רה אתיופית ב־₪10 בלבד. 100% טף.">
     <meta property="og:description" content="אינג'רה טרייה באיסוף עצמי ב־₪10 בלבד! מתכון אתיופי מסורתי, עכשיו אצלכם.">
     <meta name="description" content="אינג'רה אותנטית, טרייה וללא גלוטן – איסוף עצמי מרחובות במחיר משתלם. הזמינו עוד היום וטעמו את אתיופיה האמיתית.">
-    <meta property="og:image" content="injera-tena-preview-800x418.jpg">
+    <meta property="og:image" content="v2/injera-tena-preview-800x418.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
@@ -46,7 +45,7 @@
             --shadow-sm: 0 2px 15px rgba(0, 0, 0, 0.08);
             --shadow-md: 0 5px 30px rgba(0, 0, 0, 0.15);
             --shadow-lg: 0 15px 60px rgba(0, 0, 0, 0.2);
-            --navbar-height: 70px;
+            --navbar-height: 55px; 
         }
         
         * {
@@ -56,6 +55,7 @@
         }
         html, body { 
             overflow-x: hidden; 
+            scroll-behavior: smooth; 
         }
         
         body {
@@ -82,17 +82,17 @@
             -webkit-backdrop-filter: blur(20px);
             box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            padding: 15px 0;
+            padding: 10px 0; 
             border-bottom: 1px solid rgba(255, 107, 53, 0.1);
         }
 
         .navbar-scrolled {
             box-shadow: var(--shadow-md);
-            padding: 10px 0;
+            padding: 10px 0; 
         }
 
         .navbar-brand img {
-            height: 45px;
+            height: 35px; 
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
             transition: transform 0.3s ease;
         }
@@ -174,9 +174,9 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(to bottom, 
-                rgba(26, 15, 8, 0.4) 0%, 
-                rgba(26, 15, 8, 0.6) 50%, 
-                rgba(26, 15, 8, 0.8) 100%);
+                rgba(26, 15, 8, 0.28) 0%, 
+                rgba(26, 15, 8, 0.42) 50%, 
+                rgba(26, 15, 8, 0.56) 100%);
             z-index: 2;
         }
 
@@ -196,7 +196,7 @@
             font-weight: 900;
             margin-bottom: 20px;
             letter-spacing: -2px;
-            line-height: 1.1;
+            line-height: 1.3; 
             background: linear-gradient(to right, #fff 0%, #ffd9cc 50%, #fff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -230,7 +230,7 @@
             border-radius: 50px;
             font-size: 0.95rem;
             font-weight: 400;
-            margin-top: 20px; 
+            margin-top: 0; 
             margin-bottom: 20px; 
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
@@ -240,7 +240,7 @@
             flex-wrap: wrap; 
             gap: 15px;
             justify-content: center;
-            margin-bottom: 40px; 
+            margin-bottom: 60px; 
         }
 
         .feature-pill { 
@@ -274,6 +274,7 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 50px; 
         }
 
         .btn-modern {
@@ -320,7 +321,7 @@
         
         @keyframes pulse-cta {
             0% { box-shadow: 0 5px 25px rgba(255, 107, 53, 0.3); }
-            50% { box-shadow: 0 8px 35px rgba(255, 107, 53, 0.5); }
+            50% { box-shadow: 0 10px 45px rgba(255, 107, 53, 0.7); } 
             100% { box-shadow: 0 5px 25px rgba(255, 107, 53, 0.3); }
         }
 
@@ -344,16 +345,22 @@
             border-color: rgba(255, 255, 255, 0.5);
             color: white;
         }
-        section { padding: 100px 0; position: relative; }
+        section { 
+            padding: 100px 0; 
+            position: relative; 
+            scroll-margin-top: calc(var(--navbar-height) + 20px); 
+        }
+        #hero-section-anchor {
+             scroll-margin-top: 0; 
+        }
+
         .section-title { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 20px; color: var(--dark); letter-spacing: -1px; }
         .section-subtitle { font-size: 1.2rem; color: #666; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto; }
         .section-divider { width: 80px; height: 4px; background: var(--gradient-primary); margin: 0 auto 50px; border-radius: 2px; }
         .gallery-section { background: linear-gradient(to bottom, #fff 0%, var(--light) 100%); }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .gallery-item { position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all .4s cubic-bezier(.25,.8,.25,1); cursor: pointer; background: #000; }
-        /* .gallery-item:hover { transform: translateY(-15px) scale(1.02); box-shadow: 0 20px 50px rgba(0,0,0,0.2); } */ /* Replaced by JS click */
-        .gallery-img { width: 100%; height: 350px; object-fit: cover; transition: all .6s ease; opacity: .85; display: block; }
-        /* .gallery-item:hover .gallery-img { transform: scale(1.15); opacity: .7; } */ /* Replaced by JS click */
+        .gallery-img { width: 100%; height: 350px; object-fit: cover; transition: all .6s ease; opacity: 1; display: block; }
         
         .gallery-item.overlay-visible .gallery-img {
             transform: scale(1.15);
@@ -382,16 +389,53 @@
         .product-price small { font-size: 1rem; color: #999; font-weight: 400; }
         .product-cta { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 30px; background: var(--gradient-primary); color: #fff; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all .3s ease; margin-top: auto; }
         .product-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(255,107,53,.3); color: #fff; }
-        .deal-section { background: linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%); color: #fff; padding: 60px 0; margin-top: 80px; border-radius: 30px; position: relative; overflow: hidden; }
+        
+        .deal-section { 
+            background: linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%); 
+            color: #fff; 
+            padding: 60px 0; 
+            margin-top: 80px; 
+            border-radius: 30px; 
+            position: relative; 
+            overflow: hidden; 
+            animation: deal-pulse 3s infinite ease-in-out;
+        }
+        @keyframes deal-pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+            50% { transform: scale(1.015); box-shadow: 0 15px 45px rgba(0,0,0,.3); }
+        }
+
         .deal-section::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 60%); animation: rotate 30s linear infinite; }
         @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        
         .deal-content { position: relative; z-index: 2; text-align: center; }
+        
+        /* ADDED: CSS for the deal image */
+        .deal-image {
+            display: block;
+            width: 100%;
+            max-width: 450px; /* Adjust as needed, can be a percentage too */
+            height: 250px;    /* Consistent height with product images */
+            object-fit: cover;
+            border-radius: 15px; /* Rounded corners for the image */
+            margin: 0 auto 25px auto; /* Center image and add space below it */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* Optional: adds a subtle shadow */
+        }
+
         .deal-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; }
         .deal-description { font-size: 1.3rem; margin-bottom: 30px; opacity: .95; }
         .deal-price { font-size: 3rem; font-weight: 900; margin-bottom: 10px; }
-        .deal-original { font-size: 1.5rem; text-decoration: line-through; opacity: .7; margin-bottom: 30px; }
+        .deal-original { 
+            font-size: 1.7rem; 
+            text-decoration: line-through; 
+            opacity: 1; 
+            color: var(--dark); 
+            font-weight: 600; 
+            margin-bottom: 30px; 
+        }
         .deal-button { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--primary); padding: 20px 50px; border-radius: 50px; font-size: 1.2rem; font-weight: 700; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,.2); transition: all .3s ease; }
         .deal-button:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,.3); color: var(--primary); }
+        
         .features-section { background: #fff; }
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .feature-card { padding: 40px 30px; background: #fff; border-radius: 20px; box-shadow: var(--shadow-sm); transition: all .3s cubic-bezier(.25,.8,.25,1); text-align: center; position: relative; overflow: hidden; }
@@ -430,7 +474,13 @@
         .faq-answer { padding: 0 30px; max-height: 0; overflow: hidden; transition: all .3s ease; }
         .faq-item.active .faq-answer { padding: 0 30px 25px; max-height: 500px; }
         .faq-answer p { color: #666; line-height: 1.8; }
-        footer { background: var(--gradient-dark); color: #fff; padding: 80px 0 30px; position: relative; overflow: hidden; }
+        footer { 
+            background: var(--gradient-primary); 
+            color: #fff; 
+            padding: 80px 0 30px; 
+            position: relative; 
+            overflow: hidden; 
+        }
         footer::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); background-size: 60px 60px; }
         .footer-content { position: relative; z-index: 1; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
@@ -438,28 +488,77 @@
         .footer-brand p { opacity: .8; line-height: 1.8; margin-bottom: 30px; }
         .footer-social { display: flex; gap: 15px; }
         .social-icon { width: 50px; height: 50px; background: rgba(255,255,255,.1); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; transition: all .3s ease; text-decoration: none; color: #fff; }
-        .social-icon:hover { background: var(--primary); transform: translateY(-5px); color: #fff; }
+        .social-icon:hover { background: var(--dark); transform: translateY(-5px); color: #fff; }
         .footer-links h4 { margin-bottom: 20px; font-size: 1.3rem; }
         .footer-links li { margin-bottom: 15px; }
         .footer-links a { color: #fff; text-decoration: none; opacity: .8; transition: all .3s ease; display: inline-block; }
-        .footer-links a:hover { opacity: 1; transform: translateX(-5px); color: var(--secondary); }
+        .footer-links a:hover { opacity: 1; transform: translateX(-5px); color: var(--dark); }
         .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,.1); opacity: .8; }
-        .whatsapp-float { position: fixed; width: 70px; height: 70px; bottom: 30px; left: 30px; background: #25d366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 5px 25px rgba(37,211,102,.3); z-index: 1000; transition: all .3s cubic-bezier(.25,.8,.25,1); text-decoration: none; }
-        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 10px 40px rgba(37,211,102,.4); color: #fff; }
-        .whatsapp-float::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%; height: 100%; background: #25d366; border-radius: 50%; z-index: -1; animation: pulse-whatsapp 2s infinite; }
-        @keyframes pulse-whatsapp { 0% { transform: translate(-50%,-50%) scale(1); opacity: 1; } 100% { transform: translate(-50%,-50%) scale(1.3); opacity: 0; } }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 30px;
+            left: 30px;
+            background: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 30px rgba(37,211,102,.4); 
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s cubic-bezier(.25,.8,.25,1), 
+                        box-shadow 0.3s cubic-bezier(.25,.8,.25,1), 
+                        opacity 0.3s ease, 
+                        visibility 0.3s ease;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .whatsapp-float:hover { 
+            transform: scale(1.1); 
+            box-shadow: 0 15px 50px rgba(37,211,102,.5); 
+            color: #fff; 
+        }
+        .whatsapp-float::before { 
+            content: ''; 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%,-50%); 
+            width: 100%; 
+            height: 100%; 
+            background: #25d366; 
+            border-radius: 50%; 
+            z-index: -1; 
+            animation: pulse-whatsapp 2s infinite; 
+        }
+        @keyframes pulse-whatsapp { 
+            0% { transform: translate(-50%,-50%) scale(1); opacity: 1; } 
+            100% { transform: translate(-50%,-50%) scale(1.6); opacity: 0; } 
+        }
         
         @media (max-width: 991px) {
             .about-container, .contact-container { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
             .footer-social { justify-content: center; }
+            .footer-brand p {
+                overflow-wrap: break-word; 
+                word-wrap: break-word; 
+                hyphens: auto; 
+            }
         }
 
         @media (max-width: 768px) {
-            :root { --navbar-height: 60px; }
+            :root { --navbar-height: 55px; }
             
             .navbar-toggler {
-                padding: .4rem .8rem; /* Slightly increased padding */
+                padding: .4rem .8rem; 
+                margin-left: 0.5rem; 
             }
 
             .hero-title { font-size: 3rem; }
@@ -468,24 +567,53 @@
             .btn-modern { width: 100%; justify-content: center; }
             
             .features-pills { 
-                flex-direction: column; /* Stack pills vertically */
-                align-items: center;   /* Center stacked pills */
-                gap: 10px;             /* Adjusted gap for vertical layout */
+                flex-direction: column; 
+                align-items: center;   
+                gap: 10px;             
             }
             .feature-pill { 
-                width: 80%; /* Or max-width as preferred */
-                justify-content: center; /* Center text within the pill */
+                width: 80%; 
+                justify-content: center; 
                 padding: 10px 15px; 
                 font-size: 0.9rem; 
              }
 
+            .location-badge {
+                display: none; 
+            }
+
             .gallery-grid { grid-template-columns: 1fr; }
-            .whatsapp-float { width: 60px; height: 60px; font-size: 1.5rem; }
+            
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+            .whatsapp-float.show-on-mobile {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
             section { padding: 60px 15px; } 
-             .container { padding-left: 0; padding-right: 0; }
+            .container { padding-left: 0; padding-right: 0; } 
+
+            #products .container {
+                padding-left: 15px; 
+                padding-right: 15px; 
+            }
+            
+            /* Ensure deal image responds well on mobile */
+            .deal-image {
+                max-width: 90%; /* Allow it to be a bit smaller than full width on mobile */
+                height: 200px; /* Adjust height for mobile if needed */
+            }
 
             .product-content {
-                padding: 20px; /* Reduced padding for mobile */
+                padding: 25px; 
             }
 
             .contact-info-card { padding: 30px; }
@@ -495,7 +623,6 @@
                 padding-right: 15px;
                 margin-left: 0; 
                 margin-right: 0;
-                /* width: 100%; /* Removed as it might cause issues, block elements take width automatically */
             }
             .deal-content {
                 padding-top: 20px; 
@@ -508,24 +635,24 @@
             .deal-button { padding: 15px 30px; font-size: 1rem; }
 
             .about-container {
-                gap: 30px; /* Reduced gap for mobile */
+                gap: 30px; 
             }
             .about-image img {
-                height: 350px; /* Adjusted image height for mobile */
+                height: 350px; 
             }
             .about-image::before {
-                top: -10px; /* Adjusted bleed for mobile */
+                top: -10px; 
                 left: -10px;
                 right: -10px;
                 bottom: -10px;
             }
             .about-content h2 {
-                margin-bottom: 20px; /* Adjusted margin */
-                font-size: 2rem; /* Optional: adjust font size */
+                margin-bottom: 20px; 
+                font-size: 2rem; 
             }
             .about-content p {
-                margin-bottom: 15px; /* Adjusted margin */
-                font-size: 1rem; /* Optional: adjust font size */
+                margin-bottom: 15px; 
+                font-size: 1rem; 
             }
         }
         .loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity .5s ease; }
@@ -542,7 +669,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="logo-small.png" alt="אינג'רה טֶנָּא לוגו">
+                <img src="logo-small-v3.png" alt="אינג'רה טֶנָּא לוגו">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="החלפת מצב תפריט ניווט">
                 <span class="navbar-toggler-icon"></span>
@@ -577,9 +704,9 @@
             <div class="hero-bg-pattern"></div>
             <div id="heroCarousel" class="hero-carousel carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" style="background-image: url('carousel-item1.jpg')"></div>
-                    <div class="carousel-item" style="background-image: url('carousel-item2.jpg')"></div>
-                    <div class="carousel-item" style="background-image: url('carousel-item3.jpg')"></div>
+                    <div class="carousel-item active" style="background-image: url('v2/carousel-item1.jpg')"></div>
+                    <div class="carousel-item" style="background-image: url('v2/carousel-item2.jpg')"></div>
+                    <div class="carousel-item" style="background-image: url('v2/carousel-item3.jpg')"></div>
                 </div>
             </div>
             
@@ -632,7 +759,7 @@
                 <ul class="gallery-grid">
                     <li class="gallery-item" data-aos="fade-up" data-aos-delay="100" role="button" tabindex="0">
                         <figure>
-                            <img src="injera-gallery-01.jpg" alt="אינג'רה טרייה מוגשת על צלחת" class="gallery-img" loading="lazy">
+                            <img src="v2/injera-gallery-01.jpg" alt="אינג'רה טרייה מוגשת על צלחת" class="gallery-img" loading="lazy">
                             <figcaption class="gallery-overlay">
                                 <h3>אינג'רה טרייה</h3>
                                 <p>ישירות מהמיטאד אליכם</p>
@@ -641,7 +768,7 @@
                     </li>
                     <li class="gallery-item" data-aos="fade-up" data-aos-delay="200" role="button" tabindex="0">
                         <figure>
-                            <img src="injera-gallery-02.jpg" alt="תהליך הכנת אינג'רה מסורתי" class="gallery-img" loading="lazy">
+                            <img src="v2/injera-gallery-02.jpg" alt="תהליך הכנת אינג'רה מסורתי" class="gallery-img" loading="lazy">
                             <figcaption class="gallery-overlay">
                                 <h3>תהליך ההכנה</h3>
                                 <p>אומנות מסורתית</p>
@@ -650,7 +777,7 @@
                     </li>
                     <li class="gallery-item" data-aos="fade-up" data-aos-delay="300" role="button" tabindex="0">
                         <figure>
-                            <img src="injera-gallery-03.jpg" alt="אינג'רה עם מגוון תבשילים אתיופיים" class="gallery-img" loading="lazy">
+                            <img src="v2/injera-gallery-03.jpg" alt="אינג'רה עם מגוון תבשילים אתיופיים" class="gallery-img" loading="lazy">
                             <figcaption class="gallery-overlay">
                                 <h3>שילובים קולינריים</h3>
                                 <p>טעמים אותנטיים</p>
@@ -659,7 +786,7 @@
                     </li>
                     <li class="gallery-item" data-aos="fade-up" data-aos-delay="400" role="button" tabindex="0">
                         <figure>
-                            <img src="injera-gallery-04.jpg" alt="תקריב של גרעיני טף איכותיים" class="gallery-img" loading="lazy">
+                            <img src="v2/injera-gallery-04.jpg" alt="תקריב של גרעיני טף איכותיים" class="gallery-img" loading="lazy">
                             <figcaption class="gallery-overlay">
                                 <h3>גרעיני טף</h3>
                                 <p>איכות ללא פשרות</p>
@@ -680,7 +807,7 @@
                 <ul class="products-grid">
                     <li class="product-card featured" data-aos="fade-up" data-aos-delay="100">
                         <article>
-                            <img src="injera-gallery-01.jpg" alt="אינג'רה טרייה מוכנה להזמנה" class="product-image" loading="lazy">
+                            <img src="v2/injera-gallery-01.jpg" alt="אינג'רה טרייה מוכנה להזמנה" class="product-image" loading="lazy">
                             <div class="product-content">
                                 <h3 class="product-title">אינג'רה טרייה</h3>
                                 <p class="product-description">לחם אתיופי מסורתי מ-100% קמח טף, ללא גלוטן. מושלם לכל ארוחה!</p>
@@ -693,7 +820,7 @@
                     </li>
                     <li class="product-card" data-aos="fade-up" data-aos-delay="200">
                         <article>
-                            <img src="injera-gallery-03.jpg" alt="תבשיל שירו אתיופי" class="product-image" loading="lazy">
+                            <img src="v2/injera-gallery-03.jpg" alt="תבשיל שירו אתיופי" class="product-image" loading="lazy">
                             <div class="product-content">
                                 <h3 class="product-title">שירו</h3>
                                 <p class="product-description">תבשיל חומוס אתיופי פיקנטי, עשיר בתבלינים ובטעם. מנה טבעונית מזינה.</p>
@@ -706,7 +833,7 @@
                     </li>
                     <li class="product-card" data-aos="fade-up" data-aos-delay="300">
                         <article>
-                            <img src="injera-gallery-03.jpg" alt="תבשיל מיסיר ווט אתיופי" class="product-image" loading="lazy">
+                            <img src="v2/injera-gallery-02.jpg" alt="תבשיל מיסיר ווט אתיופי" class="product-image" loading="lazy">
                             <div class="product-content">
                                 <h3 class="product-title">מיסיר ווט</h3>
                                 <p class="product-description">תבשיל עדשים אדומות ברוטב ברברה חריף. מנה טבעונית מסורתית.</p>
@@ -719,7 +846,7 @@
                     </li>
                     <li class="product-card" data-aos="fade-up" data-aos-delay="400">
                         <article>
-                            <img src="injera-gallery-03.jpg" alt="תבשיל גומן אתיופי" class="product-image" loading="lazy">
+                            <img src="v2/injera-gallery-04.jpg" alt="תבשיל גומן אתיופי" class="product-image" loading="lazy">
                             <div class="product-content">
                                 <h3 class="product-title">גומן</h3>
                                 <p class="product-description">תרד אתיופי מוקפץ עם בצל, שום ותבלינים. בריא, טעים וטבעוני.</p>
@@ -733,7 +860,9 @@
                 </ul>
                 <div class="deal-section" data-aos="zoom-in" data-aos-delay="500">
                     <div class="deal-content">
-                        <h3 class="deal-title">🎉 מבצע קומבו משתלם!</h3>
+                        <img src="v2/injera-gallery-03.jpg" alt="תמונת מבצע משתלם - אינג'רה עם תוספות" class="deal-image" loading="lazy">
+                        
+                        <h3 class="deal-title">🎉 מבצע משתלם!</h3>
                         <p class="deal-description">ארוחה אתיופית מלאה - אינג'רה + 3 תוספות לבחירה</p>
                         <div class="deal-price">₪59</div>
                         <div class="deal-original">במקום ₪77</div>
@@ -911,7 +1040,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 אינג'רה טֶנָּא - כל הזכויות שמורות.</p>
+                    <p>© 2025 אינג'רה טֶנָּא - כל הזכויות שמורות.</p>
                 </div>
             </div>
         </div>
@@ -939,7 +1068,7 @@
                 else { navbar.classList.remove('navbar-scrolled'); }
             }
             let currentSection = "";
-            const heroSectionAnchor = document.getElementById('hero-section-anchor'); // Ensure this ID exists on your hero section
+            const heroSectionAnchor = document.getElementById('hero-section-anchor'); 
             
             document.querySelectorAll('main section[id]').forEach(section => {
                 const sectionTop = section.offsetTop - (navbar ? navbar.offsetHeight : 0) - 50; 
@@ -967,44 +1096,22 @@
 
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             link.addEventListener('click', (event) => {
-                document.querySelectorAll('.navbar-nav .nav-link.active').forEach(activeLink => {
-                    activeLink.classList.remove('active');
-                });
-                event.currentTarget.classList.add('active');
-
                 const navbarCollapse = document.querySelector('.navbar-collapse');
                 if (navbarCollapse && navbarCollapse.classList.contains('show')) { 
                     const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
                     if (bsCollapse) { bsCollapse.hide(); }
                 }
-            });
-        });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                let targetId = href;
+                document.querySelectorAll('.navbar-nav .nav-link.active').forEach(activeLink => {
+                    activeLink.classList.remove('active');
+                });
+                event.currentTarget.classList.add('active');
 
+                const href = event.currentTarget.getAttribute('href');
                 if (href === "#") { 
-                    e.preventDefault();
+                    event.preventDefault(); 
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                     return;
-                }
-                if (targetId.length > 1 && !targetId.startsWith('#')) {
-                    targetId = '#' + targetId;
-                }
-
-                if (targetId.length > 1) {
-                    try {
-                        const target = document.querySelector(targetId);
-                        if (target) {
-                            e.preventDefault();
-                            const navbar = document.querySelector('.navbar');
-                            const navbarHeight = navbar ? navbar.offsetHeight : 0;
-                            const targetPosition = target.offsetTop - navbarHeight - 20;
-                            window.scrollTo({ top: targetPosition, behavior: 'smooth'});
-                        }
-                    } catch (err) { console.error("Error finding target for smooth scroll:", targetId, err); }
                 }
             });
         });
@@ -1037,7 +1144,6 @@
             const heroCarousel = new bootstrap.Carousel(heroCarouselElement, { interval: 5000, pause: false });
         }
 
-        // Gallery item click functionality
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('click', () => {
                 item.classList.toggle('overlay-visible');
@@ -1049,6 +1155,26 @@
                 }
             });
         });
+
+        function updateWhatsAppButtonVisibility() {
+            const whatsappButton = document.querySelector('.whatsapp-float');
+            const scrollThreshold = 150; 
+
+            if (whatsappButton) {
+                if (window.innerWidth <= 768) { 
+                    if (window.pageYOffset > scrollThreshold) {
+                        whatsappButton.classList.add('show-on-mobile');
+                    } else {
+                        whatsappButton.classList.remove('show-on-mobile');
+                    }
+                } else { 
+                    whatsappButton.classList.remove('show-on-mobile');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', updateWhatsAppButtonVisibility);
+        window.addEventListener('resize', updateWhatsAppButtonVisibility);
 
 
         window.addEventListener('DOMContentLoaded', () => {
@@ -1080,6 +1206,7 @@
                     }
                 });
             }
+            updateWhatsAppButtonVisibility();
         });
     </script>
 </body>
